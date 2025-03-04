@@ -1,1 +1,24 @@
-Succes!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milledoni</title>
+</head>
+<body>
+    <h1>Milledoni</h1>
+    <h2>Finding and sharing gift ideas</h2>
+    <article class="chatbox">
+
+    </article>
+    <ul>
+        {% for product in data %}
+            <li>
+                <h2>{{ product.title }}</h2>
+                <p>{{ product.description }}</p>
+                <img src="{{ product.image }}" alt="{{ product.title }}">
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
