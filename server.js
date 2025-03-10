@@ -43,9 +43,15 @@ app.get('/', async function (request, response) {
   const apiResponseJSON = await apiResponse.json()
 
   console.log(apiResponseJSON)
-   // Render index.liquid uit de Views map
-   // Geef hier eventueel data aan mee
    response.render('index.liquid', { data: apiResponseJSON.data });
+})
+
+app.get('/gifts', async function (request, response) {
+  const apiResponse = await fetch('https://fdnd-agency.directus.app/items/milledoni_products')
+  const apiResponseJSON = await apiResponse.json()
+
+  console.log(apiResponseJSON)
+   response.render('gifts.liquid', { data: apiResponseJSON.data });
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
@@ -54,6 +60,10 @@ app.post('/', async function (request, response) {
   // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
   // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
   response.redirect(303, '/')
+})
+
+app.use((req, res, next) => {
+  res.status(404).send("Sorry can't find that!")
 })
 
 // Stel het poortnummer in waar Express op moet gaan luisteren

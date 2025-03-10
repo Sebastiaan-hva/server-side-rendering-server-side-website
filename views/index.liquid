@@ -14,9 +14,11 @@
     <ul>
         {% for product in data %}
             <li>
+                <a href="/gift/{{ product.id }}"></a>
+                <button>save gift</button>
                 <h2>{{ product.title }}</h2>
                 <p>{{ product.description }}</p>
-                <img src="{{ product.image }}" alt="{{ product.title }}">
+                <button><img src="{{ product.image }}" alt="{{ product.title }}"></button>
             </li>
         {% endfor %}
     </ul>
