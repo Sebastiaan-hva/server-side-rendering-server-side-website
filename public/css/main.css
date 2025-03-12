@@ -1,7 +1,6 @@
 nav{
     display:flex;
     flex-direction: row;
-    position:sticky;
 }
 
 #logo{
@@ -66,11 +65,22 @@ li img{
 }
 
 .grid-save{
+    
     /* grid-column-start:2; */
     transform: translateX(45px);
     margin-top:.5em;
     justify-self: end;
-    max-width: 50px;
+    max-width: 60%;
     max-height: 50px;
     border-radius: 55%;
+}
+
+.search-bar{
+    display:flex;
+    flex-direction: row;
+    position:fixed;
+    align-items: center;
+    left: 50%;
+    bottom: 1em;
+    transform: translateX(-50%);
 }

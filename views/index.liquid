@@ -13,6 +13,11 @@
 
     </article>
 
+<div class="search-bar">
+    <img src="/assets/search-icon.png">
+    <input type="search" placeholder="Today I want a gift for..."/>
+</div>
+
     <ul>
     {% for product in data %}
         <li>
@@ -23,7 +28,7 @@
             </a> {% endcomment %}
 
             <button class="grid-save"><img id="grid-save" src="/assets/save-icon.png" alt="save button"></button>
-            <a href="/gifts/{{ product.slug }}"  alt="{{ product.title }}">
+            <a href="/gifts/{{ product.slug }}"alt="{{ product.title }}">
             <button class="grid-image" alt="{{ product.title }} button">
                 <img  src="{{ product.image }}" alt="{{ product.title }}">
             </button>
