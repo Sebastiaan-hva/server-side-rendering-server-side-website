@@ -1,26 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milledoni</title>
-</head>
-<body>
-    <h1>Milledoni</h1>
+{% render "partials/head.liquid" %}
+
+
+    <nav>
+        <img id="logo" src="/assets/logo-small.png">
+
+        <img id="logo-secondary" src="/assets/saved-icon.png">
+
+        <img id="logo-tertiary" src="/assets/profile-icon.png">
+    </nav>
     <h2>Finding and sharing gift ideas</h2>
     <article class="chatbox">
 
     </article>
+
     <ul>
-        {% for product in data %}
-            <li>
-                <a href="/gift/{{ product.id }}"></a>
-                <button>save gift</button>
+    {% for product in data %}
+        <li>
+            {% comment %} <p>Slug: {{ product.slug }}</p>  {% endcomment %}
+            
+            {% comment %} <a href="/gifts/{{ product.slug }}">
                 <h2>{{ product.title }}</h2>
-                <p>{{ product.description }}</p>
-                <button><img src="{{ product.image }}" alt="{{ product.title }}"></button>
-            </li>
-        {% endfor %}
+            </a> {% endcomment %}
+
+            <button class="grid-save"><img id="grid-save" src="/assets/save-icon.png"></button>
+            <a href="/gifts/{{ product.slug }}">
+            <button class="grid-image">
+                <img  src="{{ product.image }}" alt="{{ product.title }}">
+            </button>
+            </a>
+            <p>{{ product.name }}</p>
+        </li>
+    {% endfor %}
     </ul>
-</body>
-</html>
+
+    {% comment %} iets met position sticky toevoegen {% endcomment %}
+
+
+
+{% render "partials/foot.liquid" %}
