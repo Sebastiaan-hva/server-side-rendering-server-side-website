@@ -42,11 +42,12 @@ app.get('/', async function (request, response) {
 
 
 app.get('/gifts/:slug', async function (request, response) {
-  console.log(`Fetching gift from API: https://fdnd-agency.directus.app/items/milledoni_products?${filter}`);
   const slug = request.params.slug;
   const filter = `&filter={"slug":"${slug}"}`;
-
-  const giftResponse = `https://fdnd-agency.directus.app/items/milledoni_products?${filter}`;
+  // console.log(`Fetching gift from API: https://fdnd-agency.directus.app/items/milledoni_products?${filter}`);
+  
+  const giftResponse = await fetch(`https://fdnd-agency.directus.app/items/milledoni_products?${filter}`);
+  console.log(giftResponse)
   const giftResponseJSON = await giftResponse.json();
 
   response.render("gifts.liquid", { data: giftResponseJSON}); // Stuur de JSON direct terug voor debugging
