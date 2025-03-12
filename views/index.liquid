@@ -2,11 +2,11 @@
 
 
     <nav>
-        <img id="logo" src="/assets/logo-small.png">
+        <img id="logo" src="/assets/logo-small.png" alt="go to home button">
 
-        <img id="logo-secondary" src="/assets/saved-icon.png">
+        <img id="logo-secondary" src="/assets/saved-icon.png" alt="go to saved button">
 
-        <img id="logo-tertiary" src="/assets/profile-icon.png">
+        <img id="logo-tertiary" src="/assets/profile-icon.png" alt="go to profile button">
     </nav>
     <h2>Finding and sharing gift ideas</h2>
     <article class="chatbox">
@@ -22,9 +22,9 @@
                 <h2>{{ product.title }}</h2>
             </a> {% endcomment %}
 
-            <button class="grid-save"><img id="grid-save" src="/assets/save-icon.png"></button>
-            <a href="/gifts/{{ product.slug }}">
-            <button class="grid-image">
+            <button class="grid-save"><img id="grid-save" src="/assets/save-icon.png" alt="save button"></button>
+            <a href="/gifts/{{ product.slug }}"  alt="{{ product.title }}">
+            <button class="grid-image" alt="{{ product.title }} button">
                 <img  src="{{ product.image }}" alt="{{ product.title }}">
             </button>
             </a>
