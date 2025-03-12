@@ -1,30 +1,26 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
-
-## Inhoudsopgave
-
-  * [Beschrijving](#beschrijving)
-  * [Gebruik](#gebruik)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
+# Milledoni
+Website voor Milledoni
+(https://server-side-rendering-server-side-website-t53y.onrender.com)
 
 ## Beschrijving
-<!-- In de Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Mobile first website gaat voor Milledoni
 
-## Gebruik
-<!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+![image](https://github.com/user-attachments/assets/62d07fe2-63a8-4a8e-9568-f294ec15b714)
+
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+Ik heb gebruik gemaakt van "Slug" waarmee ik in de route dynamische alle gift pagina's de naam van de gift in de URL kan meegeven bijvoorbeeld. /gifts/inkleurkostuum-piraat
+
+https://github.com/Sebastiaan-hva/server-side-rendering-server-side-website/blob/062ac2f40adc75f69a3500797079ceaec020c971/server.js#L44-L54
+
+Ook heb ik een 404 handler gemaakt die ervor zorgt dat er een error message verschijnt als de webpagina niet bestaat
+als je bijvoorbeeld naar deze niet bestaande pagina gaat
+![image](https://github.com/user-attachments/assets/7db6f77a-2713-4290-a614-be23526ed30e)
+
+dan krijg je een error message
 
 ## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+
 
 ## Bronnen
 
